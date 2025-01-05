@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+from openai import OpenAI
 from streamlit_geolocation import streamlit_geolocation
 
 # Set your OpenAI API key
