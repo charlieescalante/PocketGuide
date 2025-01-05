@@ -57,7 +57,7 @@ if st.session_state.tour_started:
             )
 
         # Extract and display the assistant’s response
-        tour_guide_text = response["choices"][0]["message"]["content"]
+        tour_guide_text = chatresponse["choices"][0]["message"]["content"]
         st.session_state.messages.append({"role": "assistant", "content": tour_guide_text})
 
         st.write("---")
