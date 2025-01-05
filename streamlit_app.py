@@ -48,10 +48,12 @@ if st.session_state.tour_started:
 
         # Call OpenAI ChatCompletion
         with st.spinner("Generating your tour guide narration..."):
-            response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",  # or 'gpt-4' if you have access
-                messages=st.session_state.messages,
-                temperature=0.7,
+            chatresponse = client.chat.completions.create(
+                model='chatgpt-4o-latest',
+                messages= st.session_state.messages,
+                temperature=1,
+                n=1,
+                stream=True
             )
 
         # Extract and display the assistant’s response
