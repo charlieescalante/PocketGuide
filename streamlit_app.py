@@ -53,7 +53,6 @@ if st.session_state.tour_started:
                 messages= st.session_state.messages,
                 temperature=1,
                 n=1,
-                stream=True
             )
 
         # Extract and display the assistant’s response
