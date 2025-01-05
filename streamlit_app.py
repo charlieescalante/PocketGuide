@@ -3,7 +3,7 @@ import openai
 from streamlit_geolocation import streamlit_geolocation
 
 # Set your OpenAI API key
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets["OPENAI_API_Key"]
 
 st.title("Hello and Welcome to PocketGuide!")
 
